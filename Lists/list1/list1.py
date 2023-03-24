@@ -117,36 +117,37 @@ def concat_list_indexwise(lst1, lst2):
     then the 1st index item, and so on till the last element. 
     Any leftover items will get added at the end of the new list.
     """
-    return list(zip(lst1, lst2))
+    return [l1 + l2 for l1, l2 in zip(lst1, lst2)]
 
 def square_each_item(lst):
     """
     This function returns list which each item in argument list has been squared
     (read the test)
     """
-    return lst ** 2
+    return [l1 ** 2 for l1 in lst]
 
 def remove_empty_strs(lst):
      """
      Remove empty strings from the list of strings
      """
-     pass
+     return list(filter(None, lst))
 
 
 def remove_item_from(lst, aaa):
     """
     Remove all occurrences of a specific item from a list.
     """
-    pass
+    return[i for i in lst if i not in [aaa]]
+
 
 def leave_item_in(lst, aaa):
     """
     Leave all occurrences of a specific item in a list.
     """
-    pass
+    return [i for i in lst if i in [aaa]]
 
 def length_of(lst):
     """
     return the length of the list
     """
-    pass
+    return len(lst)
